@@ -14,11 +14,13 @@ module.exports = {
       https: true,      
   },
 
-  entry: path.resolve(rootDir, "src/js/main.js"),
+  entry: path.resolve(rootDir, "src/js/app.js"),
   
   output: {
     path: __dirname + "/js",
-    filename: "app.min.js"
+    filename: "app.min.js",
+    libraryTarget: 'var',
+    library: "App",
   },
   
   module: {
